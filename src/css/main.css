@@ -1,5 +1,18 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: rgb(43, 48, 52);
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 #q4Wrapper {
@@ -53,12 +66,53 @@
   margin: 0 auto;
   padding: 30px 20px;
 }
+
 .layout_header {
   margin-bottom: 30px;
   text-align: center;
+  background: rgb(35, 39, 42);
+  padding: 1em 0;
+  font-size: 1.2em;
+}
+
+.layout_title {
+  margin: 0;
 }
 
 /* Begin styling the report items here! */
 .reports {
-
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 30px;
 }
+
+/* Image */
+.reports_cover {
+  display: block;
+  box-shadow: 0 5px 7px 0px rgba(0, 0, 0, 0.3);
+  margin: 0 auto 1em;
+}
+
+/* Footer */
+.reports_docs {
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  background: rgb(35, 39, 42);
+  border-radius: 5px;
+  padding: 1em 0;
+  line-height: 18px;
+}
+
+.file_info {
+  color: rgb(145, 147, 148);
+}
+
+
+/* Media Query */
+@media only screen and (min-width: 768px) {
+  .reports {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
